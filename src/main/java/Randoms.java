@@ -3,8 +3,8 @@ import java.util.PrimitiveIterator;
 import java.util.Random;
 
 public class Randoms implements Iterable<Integer> {
-    protected PrimitiveIterator.OfInt randomIterator;
-    protected int min, max;
+    private final PrimitiveIterator.OfInt randomIterator;
+    private final int min, max;
 
     public Randoms(int min, int max) {
         randomIterator = new Random().ints(min, (max + 1)).iterator();
